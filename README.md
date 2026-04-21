@@ -1,37 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+American Dream: Immersive Sales Experience 🏛️✨
+A high-performance, browser-based interactive sales deck built for the American Dream Mall. This project transitions from traditional static PDFs to a cinematic, non-linear storytelling experience designed to drive retail leasing and event bookings.
 
-## Getting Started
+Live Demo: https://american-dream-interactive-deck-o7c.vercel.app/
 
-First, run the development server:
+🚀 Tech Stack
+Framework: Next.js 14 (App Router)
 
-```bash
+Animations: Framer Motion (Spring-based physics)
+
+Scrolling: Lenis Smooth Scroll
+
+Styling: Tailwind CSS with Luxury Glassmorphism UI
+
+Deployment: Vercel
+
+💎 Key Features
+Cinematic Scrollytelling: High-impact hero section with parallax scaling and scroll-triggered entrance animations.
+
+Non-Linear Navigation: A custom floating magnetic navbar that allows users to control their own journey through the deck.
+
+Bento Grid Attractions: A modern, responsive grid showcasing the property's diverse entertainment ecosystem.
+
+Business Focused: Dedicated modules for scale statistics, luxury retail, refined gastronomy, and grand spectacles to drive commercial action.
+
+Conversion Optimized: Integrated luxury inquiry forms for prospective tenants and partners.
+
+🤖 AI Tools Used
+Visuals: Used Generative AI to enhance high-resolution imagery and create consistent luxury brand renderings where official assets were limited.
+
+Development: Utilized AI-powered coding assistants (Gemini) to accelerate component modularization and debug complex Framer Motion staggering logic.
+
+🛠️ Installation & Setup
+Clone the repository:
+
+Bash
+git clone https://github.com/Dhruv-hub26/american-dream-interactive-deck.git
+Install dependencies:
+
+Bash
+npm install
+Run the development server:
+
+Bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# american-dream-interactive-deck
+Open the browser:
+Go to http://localhost:3000 to view the project.
