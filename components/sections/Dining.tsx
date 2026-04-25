@@ -1,9 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 
+import Section from "@/components/ui/Section";
+
 export default function Dining() {
     return (
-        <section id="dining" className="relative w-full h-[90vh] overflow-hidden flex items-center">
+        <Section id="dining" className="flex items-center">
             {/* Parallax Background */}
             <motion.div
                 initial={{ scale: 1.1 }}
@@ -20,7 +22,7 @@ export default function Dining() {
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
             </motion.div>
 
-            <div className="container mx-auto px-8 md:px-16 relative z-10">
+            <div className="container mx-auto px-8 md:px-16 relative z-10 w-full">
                 <motion.div
                     initial={{ opacity: 0, x: -80 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -38,6 +40,6 @@ export default function Dining() {
                     </p>
                 </motion.div>
             </div>
-        </section>
+        </Section>
     );
 }

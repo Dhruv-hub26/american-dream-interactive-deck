@@ -1,10 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
 
+import Section from "@/components/ui/Section";
+
 export default function Events() {
     return (
-        <section id="events" className="py-32 bg-background text-white px-8 md:px-16 overflow-hidden">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+        <Section id="events" className="bg-background text-white px-8 md:px-16">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center w-full">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -28,7 +30,7 @@ export default function Events() {
                     <div className="space-y-12">
                         <div className="group border-l-2 border-accent/30 hover:border-accent pl-8 transition-colors">
                             <h4 className="text-2xl font-bold mb-3 font-playfair">Global Fashion Hub</h4>
-                            <p className="text-gray-400 font-inter leading-relaxed">Hosting the world's most prestigious runway events and high-end fashion launches.</p>
+                            <p className="text-gray-400 font-inter leading-relaxed">Hosting the world&apos;s most prestigious runway events and high-end fashion launches.</p>
                         </div>
                         <div className="group border-l-2 border-white/10 hover:border-accent pl-8 transition-colors">
                             <h4 className="text-2xl font-bold mb-3 font-playfair">Iconic Performances</h4>
@@ -37,6 +39,6 @@ export default function Events() {
                     </div>
                 </motion.div>
             </div>
-        </section>
+        </Section>
     );
 }

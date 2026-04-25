@@ -3,6 +3,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
+import Section from "@/components/ui/Section";
+
 export default function Hero() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -28,10 +30,10 @@ export default function Hero() {
   const backgroundScale = useTransform(scrollY, [0, 1000], [1, 1.15]);
 
   return (
-    <section id="hero" className="relative w-full h-screen overflow-hidden flex items-center justify-center">
+    <Section id="hero">
       <motion.div
         initial={{ filter: "blur(20px)", opacity: 0 }}
-        animate={{ filter: "blur(0px)", opacity: 1 }}
+        whileInView={{ filter: "blur(0px)", opacity: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
         style={{ scale: backgroundScale }}
         className="absolute inset-0 w-full h-full z-0 origin-top"
@@ -41,10 +43,10 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_30%,_rgba(0,0,0,0.85)_100%)] pointer-events-none"></div>
       </motion.div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center px-4 md:px-8 text-center mt-12">
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 md:px-8 text-center mt-12 w-full h-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="glass-panel backdrop-blur-[32px] px-6 py-10 md:px-12 md:py-16 rounded-[2.5rem] shadow-2xl flex flex-col items-center border border-white/10"
           style={{ WebkitBackdropFilter: "blur(32px)" }}
@@ -52,7 +54,7 @@ export default function Hero() {
           <motion.h1
             variants={containerVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
             className="text-4xl md:text-5xl lg:text-7xl font-bold text-white max-w-4xl tracking-tight leading-[1.1] flex flex-wrap justify-center"
             style={{ fontFamily: 'var(--font-playfair)' }}
           >
@@ -80,7 +82,7 @@ export default function Hero() {
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
             className="mt-6 text-lg md:text-2xl text-gray-200 max-w-2xl font-light"
           >
@@ -91,7 +93,7 @@ export default function Hero() {
 
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 1, delay: 2.2 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
       >
@@ -100,6 +102,6 @@ export default function Hero() {
           <ChevronDown className="w-5 h-5 text-accent" />
         </motion.div>
       </motion.div>
-    </section>
+    </Section>
   );
 }

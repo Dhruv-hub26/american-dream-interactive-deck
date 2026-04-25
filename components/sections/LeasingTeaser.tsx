@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 
+import Section from "@/components/ui/Section";
+
 export default function LeasingTeaser() {
   return (
-    <section id="leasing" className="py-32 md:py-48 bg-background flex flex-col items-center justify-center text-center px-4 relative overflow-hidden">
+    <Section id="leasing" className="bg-background flex flex-col items-center justify-center text-center px-4 relative overflow-hidden">
       {/* Top Gradient Line */}
       <div className="absolute top-0 w-1/2 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent"></div>
 
@@ -14,7 +16,7 @@ export default function LeasingTeaser() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="max-w-4xl flex flex-col items-center z-10"
+        className="max-w-4xl flex flex-col items-center z-10 w-full"
       >
         <motion.p
           initial={{ opacity: 0, letterSpacing: "0.1em" }}
@@ -50,6 +52,6 @@ export default function LeasingTeaser() {
 
       {/* Background Ambient Glow */}
       <div className="absolute bottom-0 left-0 w-full h-[40vh] bg-gradient-to-t from-accent/5 to-transparent pointer-events-none blur-3xl z-0 -translate-y-10"></div>
-    </section>
+    </Section>
   );
 }

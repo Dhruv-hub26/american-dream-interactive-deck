@@ -2,12 +2,14 @@
 import { motion } from "framer-motion";
 import { Mail, MapPin, Send } from "lucide-react";
 
+import Section from "@/components/ui/Section";
+
 export default function Contact() {
     return (
-        <section id="contact" className="py-32 bg-black relative overflow-hidden px-8">
+        <Section id="contact" className="bg-black relative px-8 flex items-center">
             <div className="absolute top-0 right-0 w-1/2 h-full bg-accent/5 blur-[150px] -z-10 animate-pulse"></div>
 
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
 
                     <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
@@ -15,7 +17,7 @@ export default function Contact() {
                             Connect with <br /><span className="text-accent italic">Excellence.</span>
                         </h2>
                         <p className="text-gray-400 text-xl mb-16 font-light font-inter">
-                            Be part of North America's premier lifestyle destination.
+                            Be part of North America&apos;s premier lifestyle destination.
                         </p>
 
                         <div className="space-y-10">
@@ -59,6 +61,6 @@ export default function Contact() {
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 w-full h-[60vh] bg-[url('/assets/support-luxury.jpg')] bg-cover opacity-[0.03] grayscale -z-20"></div>
-        </section>
+        </Section>
     );
 }

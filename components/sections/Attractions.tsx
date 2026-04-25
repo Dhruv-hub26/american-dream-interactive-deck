@@ -27,8 +27,11 @@ const attractions = [
   },
 ];
 
+import Section from "@/components/ui/Section";
+import { Variants } from "framer-motion";
+
 export default function Attractions() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 80 },
     visible: {
       opacity: 1,
@@ -37,19 +40,16 @@ export default function Attractions() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, scale: 0.95 },
     visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } }
   };
 
   return (
-    <section id="attractions" className="py-24 md:py-32 px-4 md:px-8 bg-background overflow-hidden relative">
+    <Section id="attractions" className="py-24 md:py-32 px-4 md:px-8">
       <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
-        className="max-w-7xl mx-auto"
+        className="max-w-7xl mx-auto w-full"
       >
         <div className="mb-16 md:mb-24">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 font-playfair">
@@ -111,6 +111,6 @@ export default function Attractions() {
           </motion.div>
         </div>
       </motion.div>
-    </section>
+    </Section>
   );
 }

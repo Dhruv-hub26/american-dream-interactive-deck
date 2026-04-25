@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import SmoothScrolling from "@/components/ui/SmoothScrolling";
-import Navbar from "@/components/ui/Navbar"; // Check kar lena path yahi hai na
+import Navbar from "@/components/ui/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,13 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="antialiased bg-background text-text selection:bg-accent selection:text-black">
-        <SmoothScrolling>
-          <Navbar />
-          <main>
-            {children}
-          </main>
-        </SmoothScrolling>
+      <body className="antialiased bg-background text-text selection:bg-accent selection:text-black overflow-hidden">
+        <Navbar />
+        {children}
       </body>
     </html>
   );

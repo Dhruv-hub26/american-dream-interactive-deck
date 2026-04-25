@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const scaleData = [
   {
@@ -24,19 +23,18 @@ const scaleData = [
   },
 ];
 
-export default function Scale() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+import Section from "@/components/ui/Section";
 
+export default function Scale() {
   return (
-    <section className="relative w-full py-24 md:py-32 bg-background text-text overflow-hidden">
+    <Section id="scale" className="py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          variants={{
+            hidden: { opacity: 0, y: 30 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+          }}
           className="text-center mb-16 md:mb-24"
         >
           <h2 style={{ fontFamily: "var(--font-playfair)" }} className="text-4xl md:text-5xl font-bold mb-4">
@@ -47,13 +45,14 @@ export default function Scale() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full">
           {scaleData.map((item, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-              transition={{ duration: 0.8, delay: item.delay, ease: "easeOut" }}
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: item.delay, ease: "easeOut" } }
+              }}
               className="glass-panel p-8 rounded-2xl flex flex-col items-center justify-center text-center group hover:bg-white/5 transition-colors duration-500"
             >
               <div className="mb-2">
@@ -70,6 +69,6 @@ export default function Scale() {
       
       {/* Background ambient light */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-accent/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
-    </section>
+    </Section>
   );
 }
