@@ -48,4 +48,4 @@ Go to http://localhost:3000 to view the project.
 
 
 📐 Design Rationale
-The UI is inspired by luxury brands like Apple and Tesla, featuring minimal chrome and maximum visual impact. The architecture is modular, allowing for future expansion into deeper leasing and sponsorship sub-modules without a complete rewrite.
+The UI is inspired by luxury brands like Apple and Tesla, featuring minimal chrome and maximum visual impact. The architecture is modular, allowing for future expansion into deeper leasing and sponsorship sub-modules without a complete rewrite.# American--Dream-Interactive-Deck
